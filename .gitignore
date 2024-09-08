@@ -1,0 +1,4 @@
+/node_modules
+.env
+date.txt
+date.json
