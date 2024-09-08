@@ -1,6 +1,6 @@
 @echo off
 REM Ejecutar el script de Node.js
-node .\index.js
+node C:\Users\Fenix\Downloads\git1\queue_v1\index.js
 if %errorlevel% neq 0 (
     echo Error: Node.js script failed.
     pause
@@ -8,7 +8,7 @@ if %errorlevel% neq 0 (
 )
 
 REM Add all changes to the staging area
-git add .
+git add C:\Users\Fenix\Downloads\git1\queue_v1\*
 if %errorlevel% neq 0 (
     echo Error: Failed to add files to staging area.
     pause
