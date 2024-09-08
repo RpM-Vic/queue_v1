@@ -1,15 +1,35 @@
 @echo off
 REM Ejecutar el script de Node.js
 node .\index.js
-REM Comprobar si el comando anterior salió bien
-echo.
-if %errorlevel% equ 0 (
-    echo The script succeded.
-) else (
-    echo there was an error.
+if %errorlevel% neq 0 (
+    echo Error: Node.js script failed.
+    pause
+    exit /b %errorlevel%
 )
-echo.
-REM Pausar para que el usuario vea el mensaje
-echo.
-REM echo Presione cualquier tecla para continuar...
+
+REM Add all changes to the staging area
+git add .
+if %errorlevel% neq 0 (
+    echo Error: Failed to add files to staging area.
+    pause
+    exit /b %errorlevel%
+)
+
+REM Commit the changes with a message
+git commit -m "Update"
+if %errorlevel% neq 0 (
+    echo Error: Failed to commit changes.
+    pause
+    exit /b %errorlevel%
+)
+
+REM Push the changes to the remote repository
+git push origin main
+if %errorlevel% neq 0 (
+    echo Error: Failed to push changes to remote repository.
+    pause
+    exit /b %errorlevel%
+)
+
+echo The script succeeded.
 pause
