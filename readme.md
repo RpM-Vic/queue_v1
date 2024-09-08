@@ -4,7 +4,7 @@ of the latest pushes.
 
 I wonder if it is good idea if I create a local database instead of a json file?
 
-This is the name of the talk in the talk wizard:
-Apush_v2
+This is the name of the task in the task wizard:
+Autopush
 
 autopush didn't work
