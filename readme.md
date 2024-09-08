@@ -3,3 +3,8 @@ I also want to crate a queue in a json file that will contatin the date
 of the latest pushes.
 
 I wonder if it is good idea if I create a local database instead of a json file?
+
+This is the name of the talk in the talk wizard:
+Apush_v2
+
+autopush didn't work
