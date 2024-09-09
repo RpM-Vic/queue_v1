@@ -13,7 +13,6 @@ fs.readFile(filePath, 'utf-8')
       readed.shift()
     }
     readed.push(dateString)
-    console.log(readed)
     fs.writeFile(filePath, JSON.stringify(readed, null, 2))
   }).catch((err) => {
     console.error(err)
