@@ -9,7 +9,7 @@ const dateString = ` ${date1.toLocaleTimeString()} ${date1.toLocaleDateString()}
 fs.readFile(filePath, 'utf-8')
   .then((result) => {
     const readed = JSON.parse(result)
-    if (readed.length > 10) {
+    if (readed.length > 40) {
       readed.shift()
     }
     readed.push(dateString)
